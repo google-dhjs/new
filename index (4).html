@@ -1,0 +1,296 @@
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <title>입장 안내</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 썸네일(미리보기) 메타 -->
+  <meta property="og:title" content="🔥1월12일 급등주 공개! 지금 바로 확인하기">
+  <meta property="og:description" content="입장 마감 임박">
+  <meta property="og:image" content="https://i.ibb.co/nsmFppyX/photo-2026-01-02-11-16-58.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- 폰트 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary: #00d4aa;
+      --primary-glow: rgba(0, 212, 170, 0.5);
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      background: #0a0f1a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* 배경 */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 30% 20%, rgba(0, 212, 170, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(0, 150, 200, 0.1) 0%, transparent 50%);
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      max-width: 400px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 로고 */
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 30px var(--primary-glow);
+      margin-bottom: 16px;
+    }
+
+    /* 수익 인증 */
+    .proof {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* 타이틀 */
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    /* 버튼 */
+    .cta {
+      display: inline-block;
+      width: 100%;
+      padding: 18px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      background: linear-gradient(135deg, #00d4aa, #00f5c4);
+      box-shadow: 0 8px 32px rgba(0, 212, 170, 0.4);
+      text-decoration: none;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    /* 라이브 뱃지 */
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 59, 48, 0.15);
+      border: 1px solid rgba(255, 59, 48, 0.3);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #ff3b30;
+      margin-bottom: 16px;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #ff3b30;
+      border-radius: 50%;
+      animation: blink 1s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* 남은 자리 */
+    .spots {
+      background: rgba(255, 204, 0, 0.1);
+      border: 1px solid rgba(255, 204, 0, 0.3);
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #ffcc00;
+    }
+
+    .spots strong {
+      font-size: 18px;
+    }
+
+    /* 무료 뱃지 */
+    .free-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      animation: shake 2s ease-in-out infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-3deg); }
+      75% { transform: rotate(3deg); }
+    }
+
+    /* 버튼 아래 문구 */
+    .trust-text {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .trust-text::before {
+      content: "🔒";
+    }
+
+    /* 참여자 수 */
+    .viewers {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .viewer-dots {
+      display: flex;
+      gap: -4px;
+    }
+
+    .viewer-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #0a0f1a;
+      margin-left: -8px;
+    }
+
+    .viewer-dot:first-child {
+      margin-left: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+  <!-- 라이브 뱃지 -->
+  <div class="live-badge">
+    <span class="live-dot"></span>
+    <span><strong id="liveCount">127</strong>명 실시간 접속 중</span>
+  </div>
+
+  <img src="logo.jpeg" class="logo" alt="로고">
+  <img src="proof.jpeg" class="proof" alt="수익 인증">
+  
+  <!-- 무료 뱃지 -->
+  <span class="free-tag">100% 무료 입장</span>
+
+  <h1 class="title">
+    <span class="highlight">무료 종목</span> 받으러 가기
+  </h1>
+  <p class="subtitle">텔레그램으로 이동합니다</p>
+
+  <!-- 남은 자리 -->
+  <div class="spots">
+    ⚠️ 오늘 남은 자리 <strong id="spots">23</strong>명
+  </div>
+
+  <a href="https://t.me/+R87DhjSjkFFjYzQ1" class="cta">
+    🚀 지금 무료 입장하기
+  </a>
+
+  <p class="trust-text">개인정보 수집 없이 바로 입장</p>
+
+  <!-- 실시간 참여자 -->
+  <div class="viewers">
+    <div class="viewer-dots">
+      <img class="viewer-dot" src="https://i.pravatar.cc/40?img=1" alt="">
+      <img class="viewer-dot" src="https://i.pravatar.cc/40?img=2" alt="">
+      <img class="viewer-dot" src="https://i.pravatar.cc/40?img=3" alt="">
+    </div>
+    <span>방금 <strong>3명</strong>이 입장했습니다</span>
+  </div>
+</div>
+
+<script>
+  // 실시간 접속자 수 랜덤 변동
+  setInterval(() => {
+    const el = document.getElementById('liveCount');
+    const current = parseInt(el.innerText);
+    const change = Math.random() > 0.5 ? 1 : -1;
+    el.innerText = Math.max(100, Math.min(200, current + change));
+  }, 3000);
+
+  // 남은 자리 천천히 감소
+  setInterval(() => {
+    const el = document.getElementById('spots');
+    const current = parseInt(el.innerText);
+    if (current > 5 && Math.random() > 0.7) {
+      el.innerText = current - 1;
+    }
+  }, 8000);
+</script>
+
+
+
+</body></html>
